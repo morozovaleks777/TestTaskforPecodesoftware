@@ -1,6 +1,7 @@
 package com.example.testtaskforpecodesoftware
 
 
+import android.app.Notification
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +28,7 @@ class NumberFragment : Fragment() {
             val textView: TextView = view.findViewById(R.id.textView)
             textView.text = getInt(ARG_OBJECT).toString()
         }
+
     }
 
 }

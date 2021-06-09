@@ -59,6 +59,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.484"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:onClick="minusButton"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

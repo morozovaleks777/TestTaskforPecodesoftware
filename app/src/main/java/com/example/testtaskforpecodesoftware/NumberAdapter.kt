@@ -1,5 +1,7 @@
 package com.example.testtaskforpecodesoftware
 
+import android.accessibilityservice.GestureDescription
+import android.app.Notification
 import android.os.Bundle
 import android.widget.Toast
 
@@ -10,10 +12,10 @@ import kotlin.properties.Delegates
 
 
 class NumberAdapter(fragment: FragmentActivity) : FragmentStateAdapter(fragment) {
-    val fragments: MutableList<NumberFragment> = ArrayList()
+    val fragments: MutableList<Int> = ArrayList()
 
-var i =1
-    override fun getItemCount(): Int =plus()
+var i =0
+
 
     override fun createFragment(position: Int): Fragment {
 
@@ -21,15 +23,18 @@ var i =1
         fragment.arguments = Bundle().apply {
             putInt(ARG_OBJECT, position +1)
         }
+       fragments.add(position)
         return fragment
 
 
     }
 
+    override fun getItemCount(): Int =fragments.size+1
     fun plus( ):Int{
 
         i++
 
         return i
     }
+
 }
