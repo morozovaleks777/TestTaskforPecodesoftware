@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Oleksandr_Morozov/AndroidStudioProjects/TestTaskforPecodesoftware/app/src/main/res/drawable-anydpi-v24/ic_stat_name.xml" value="0.1" />
+        <entry key="..\:/Users/Oleksandr_Morozov/AndroidStudioProjects/TestTaskforPecodesoftware/app/src/main/res/drawable/ringbutton.xml" value="0.1" />
         <entry key="..\:/Users/Oleksandr_Morozov/AndroidStudioProjects/TestTaskforPecodesoftware/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Oleksandr_Morozov/AndroidStudioProjects/TestTaskforPecodesoftware/app/src/main/res/layout/fragment_.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/Oleksandr_Morozov/AndroidStudioProjects/TestTaskforPecodesoftware/app/src/main/res/layout/fragment_number.xml" value="0.134375" />
+        <entry key="..\:/Users/Oleksandr_Morozov/AndroidStudioProjects/TestTaskforPecodesoftware/app/src/main/res/layout/fragment_number.xml" value="0.136" />
       </map>
     </option>
   </component>
