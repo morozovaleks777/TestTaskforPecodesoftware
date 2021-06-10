@@ -8,7 +8,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 
 
 class NumberAdapter(fragment: FragmentActivity) : FragmentStateAdapter(fragment) {
-    var i = 1
+   companion object{
+       var i = 1
+   }
     override fun createFragment(position: Int): Fragment {
         val fragment = NumberFragment()
         fragment.arguments = Bundle().apply {
@@ -18,4 +20,5 @@ class NumberAdapter(fragment: FragmentActivity) : FragmentStateAdapter(fragment)
     }
 
     override fun getItemCount(): Int = i
+
 }

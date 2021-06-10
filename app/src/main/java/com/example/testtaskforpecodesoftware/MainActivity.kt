@@ -12,13 +12,14 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.example.testtaskforpecodesoftware.NumberAdapter.Companion.i
 import kotlin.random.Random
 
 const val INTENT_EXTRA_NOTIFICATION = "noti"
 
 class MainActivity : FragmentActivity() {
     private lateinit var adapter: NumberAdapter
-    private lateinit var viewPager: ViewPager2
+    lateinit var viewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,8 @@ class MainActivity : FragmentActivity() {
         adapter = NumberAdapter(this)
         viewPager = findViewById(R.id.pager)
         viewPager.adapter = adapter
+
+
     }
 //    override fun onResume() {
 //        super.onResume()
@@ -84,8 +87,8 @@ class MainActivity : FragmentActivity() {
     @SuppressLint("NotifyDataSetChanged")
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     fun plusButton(view: View) {
-        adapter.i++
-        adapter.createFragment(adapter.i)
+        i++
+        adapter.createFragment(i)
         adapter.notifyDataSetChanged()
         viewPager.setBackgroundColor(Random.nextInt())
 
