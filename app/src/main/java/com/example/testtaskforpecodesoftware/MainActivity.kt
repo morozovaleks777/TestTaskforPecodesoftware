@@ -38,9 +38,7 @@ class MainActivity : FragmentActivity() {
 
     fun notificationButton(view: View){
 
-
-        val nid=1
-
+        var nId=Random.nextInt()
         val intent = Intent(this,NumberFragment::class.java)
         intent.apply {
            flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
@@ -50,7 +48,9 @@ class MainActivity : FragmentActivity() {
             }
        }
         val pendingIntent = getActivity (applicationContext , 0, intent, 0)
-        val builder = NotificationCompat.Builder(application.baseContext, NotificationApp.CHANNEL_1_ID)
+        val builder = NotificationCompat.Builder(application.baseContext,
+            NotificationApp.CHANNEL_1_ID
+        )
             .setSmallIcon(R.drawable.ic_stat_name)
             .setContentTitle("Notification ")
             .setContentText("Notification ${adapter.getItemId(viewPager.currentItem+1)}")
@@ -60,7 +60,7 @@ class MainActivity : FragmentActivity() {
             .setContentIntent(pendingIntent)
 
         with(NotificationManagerCompat.from(application.baseContext)) {
-            notify(nid, builder.build())
+            notify(++nId, builder.build())
        }
     }
     @SuppressLint("NotifyDataSetChanged")
