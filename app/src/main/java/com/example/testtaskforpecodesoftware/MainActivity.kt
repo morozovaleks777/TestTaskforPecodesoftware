@@ -21,6 +21,8 @@ class MainActivity : FragmentActivity() {
 
     private lateinit var adapter: NumberAdapter
     private lateinit var viewPager: ViewPager2
+    private lateinit var fragment: NumberFragment
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +37,10 @@ class MainActivity : FragmentActivity() {
     }
 
     fun notificationButton(view: View){
+
+
         val nid=1
+
         val intent = Intent(this,NumberFragment::class.java)
         intent.apply {
            flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
@@ -48,7 +53,7 @@ class MainActivity : FragmentActivity() {
         val builder = NotificationCompat.Builder(application.baseContext, NotificationApp.CHANNEL_1_ID)
             .setSmallIcon(R.drawable.ic_stat_name)
             .setContentTitle("Notification ")
-            .setContentText("Notification ${adapter.i}")
+            .setContentText("Notification ${adapter.getItemId(viewPager.currentItem+1)}")
             .setAutoCancel(true)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setCategory(NotificationCompat.CATEGORY_MESSAGE)
@@ -64,7 +69,7 @@ class MainActivity : FragmentActivity() {
         adapter.i++
         adapter.createFragment(adapter.i)
         adapter.notifyDataSetChanged()
-        viewPager.adapter = adapter
         viewPager.setBackgroundColor(Random.nextInt())
+
     }
 }

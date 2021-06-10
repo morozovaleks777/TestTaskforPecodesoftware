@@ -22,6 +22,7 @@ class NumberAdapter(fragment: FragmentActivity) : FragmentStateAdapter(fragment)
         fragment.arguments = Bundle().apply {
             putInt(ARG_OBJECT, position+1 )
         }
+
         return fragment
     }
 fun getvisibility(view:View){
