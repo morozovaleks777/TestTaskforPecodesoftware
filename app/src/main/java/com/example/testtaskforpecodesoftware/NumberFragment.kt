@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 const val ARG_OBJECT = "object"
 
 class NumberFragment : Fragment() {
-    var arg=0
+    var arg = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,9 +23,7 @@ class NumberFragment : Fragment() {
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
             val textView: TextView = view.findViewById(R.id.textView)
             textView.text = getInt(ARG_OBJECT).toString()
-            arg=getInt(ARG_OBJECT)
-
-
+            arg = getInt(ARG_OBJECT)
         }
     }
 }

@@ -1,9 +1,9 @@
 package com.example.testtaskforpecodesoftware
 
-import android.app.NotificationManager
-import android.app.NotificationChannel
-import android.os.Build
 import android.app.Application
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.os.Build
 
 class NotificationApp : Application() {
     override fun onCreate() {
@@ -12,7 +12,7 @@ class NotificationApp : Application() {
     }
 
     private fun createNotificationChannels() {
-       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel1 = NotificationChannel(
                 CHANNEL_1_ID,
                 "Channel 1",
@@ -32,6 +32,7 @@ class NotificationApp : Application() {
             manager.createNotificationChannel(channel2)
         }
     }
+
     companion object {
         const val CHANNEL_1_ID = "channel1"
         const val CHANNEL_2_ID = "channel2"
