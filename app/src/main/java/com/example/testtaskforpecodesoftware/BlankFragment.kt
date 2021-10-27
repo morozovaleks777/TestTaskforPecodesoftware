@@ -1,6 +1,8 @@
 package com.example.testtaskforpecodesoftware
 
 
+
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,7 +30,7 @@ class BlankFragment : Fragment() {
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
             val textView: TextView = view.findViewById(R.id.textView)
             val minusButton = view.findViewById<Button>(R.id.minusButton2)
-            if (i >= 2) {
+            if (i >=2) {
                 minusButton.isVisible = true
             }
             textView.text = getInt(ARG_OBJECT).toString()
